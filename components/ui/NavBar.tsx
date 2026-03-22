@@ -85,31 +85,6 @@ export default function NavBar({ activeSection = 0 }: { activeSection?: number }
           ))}
         </div>
 
-        {/* Hire Me CTA */}
-        <motion.button
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-          onClick={() => scrollTo(5)}
-          className="hidden-mobile"
-          style={{
-            background: 'transparent',
-            border: '1px solid rgba(200,169,110,0.45)',
-            color: '#c8a96e',
-            fontFamily: 'Lato, sans-serif', fontSize: '12px', fontWeight: 700,
-            letterSpacing: '0.14em', padding: '9px 24px', cursor: 'pointer',
-            transition: 'background 0.25s, box-shadow 0.25s',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(200,169,110,0.08)'
-            ;(e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 18px rgba(200,169,110,0.2)'
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'transparent'
-            ;(e.currentTarget as HTMLButtonElement).style.boxShadow = 'none'
-          }}
-        >
-          HIRE ME
-        </motion.button>
 
         {/* Hamburger */}
         <button
