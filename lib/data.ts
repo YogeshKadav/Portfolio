@@ -118,12 +118,12 @@ export const PORTFOLIO_DATA: PortfolioData = {
   experience: [
     {
       id: 1,
-      company: 'iMocha',
+      company: '',
       role: 'Software Engineer',
       period: 'May 2025 – Present',
       current: true,
       bullets: [
-        'Engineering production REST APIs in .NET Core that power the core assessment workflows for iMocha\'s SaaS platform',
+        'Engineering production REST APIs in .NET Core that power the core assessment workflows of a SaaS platform',
         'Designed and deployed Azure Functions for async, event-driven workloads — decoupling background processing from the core API layer',
         'Containerized backend services with Docker, eliminating environment-specific failures and standardizing the deployment pipeline',
         'Established API documentation standards using Apidog, enabling faster frontend integration and cleaner third-party onboarding',
@@ -134,7 +134,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 2,
-      company: 'STW Services LLP',
+      company: '',
       role: '.NET Developer',
       period: 'Apr 2023 – May 2025',
       current: false,
@@ -150,7 +150,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 3,
-      company: 'LINGUASOL Pvt. Ltd.',
+      company: '',
       role: 'Software Engineer',
       period: 'Dec 2021 – Mar 2023',
       current: false,
@@ -243,7 +243,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 6,
       title: 'Assessment Platform API',
       description:
-        'Core backend contributor to iMocha\'s SaaS assessment platform — building and maintaining production REST APIs consumed by thousands of users. Established API contracts and documentation standards using Apidog to streamline frontend integration and third-party onboarding.',
+        'Core backend contributor to a large-scale SaaS assessment platform — building and maintaining production REST APIs consumed by thousands of users. Established API contracts and documentation standards using Apidog to streamline frontend integration and third-party onboarding.',
       tech: ['ASP.NET Core', 'C#', 'Docker', 'Apidog'],
       category: 'Backend',
       color: '#ff00ff',
@@ -251,7 +251,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
   education: {
     degree: 'B.Sc. Computer Science',
-    institution: 'Annasaheb Magar College',
+    institution: 'University of Pune',
     location: 'Pune, Maharashtra',
     year: '2021',
   },
