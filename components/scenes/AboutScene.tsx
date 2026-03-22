@@ -141,7 +141,6 @@ export function AboutScene({ scrollOffset = 0 }: AboutSceneProps) {
         <div style={{ borderTop: '1px solid rgba(138,43,226,0.3)', paddingTop: '10px', marginTop: '10px' }}>
           <div style={{ color: '#8a2be2', fontSize: '10px', marginBottom: '6px' }}>// CONTACT</div>
           <div style={{ color: '#e0e0e0', fontSize: '10px' }}>{PORTFOLIO_DATA.contact.email}</div>
-          <div style={{ color: '#e0e0e0', fontSize: '10px', marginTop: '3px' }}>{PORTFOLIO_DATA.contact.phone}</div>
         </div>
       </AboutCard>
 

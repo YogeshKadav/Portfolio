@@ -288,13 +288,6 @@ export default function ContactTerminal() {
             >
               <span style={{ color: '#00f0ff' }}>$</span> linkedin.connect()
             </a>
-            <a
-              href={`tel:${PORTFOLIO_DATA.contact.phone}`}
-              className="flex items-center gap-2 text-xs hover:text-pink-400 transition-colors"
-              style={{ color: '#8a2be2', fontFamily: 'Share Tech Mono, monospace' }}
-            >
-              <span style={{ color: '#00f0ff' }}>$</span> phone.call('{PORTFOLIO_DATA.contact.phone}')
-            </a>
           </motion.div>
         )}
       </div>

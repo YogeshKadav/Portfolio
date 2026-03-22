@@ -25,15 +25,21 @@ export interface SkillGroup {
   ring: number
 }
 
+export interface WorkHighlight {
+  category: string
+  color: string
+  items: string[]
+}
+
 export interface PortfolioData {
   name: string
   title: string
   subtitle: string
   summary: string
   philosophy: string
+  workHighlights: WorkHighlight[]
   contact: {
     email: string
-    phone: string
     linkedin: string
     location: string
     github: string
@@ -65,9 +71,46 @@ export const PORTFOLIO_DATA: PortfolioData = {
     'Backend engineer with 4 years of shipping production software across fintech, enterprise automation, and SaaS. Deep in the .NET ecosystem — from designing API contracts to containerizing services and building cloud-native pipelines on Azure. I focus on systems that are reliable, observable, and built to last.',
   philosophy:
     'Backend engineering, to me, is about removing uncertainty. Every API contract, deployment pipeline, and data flow should be predictable and easy to reason about. I build with clarity first — performance and scale follow naturally.',
+  workHighlights: [
+    {
+      category: 'API & Backend',
+      color: '#00f0ff',
+      items: [
+        'Designed and built production-grade REST APIs in .NET Core, serving as the backbone for enterprise SaaS workflows',
+        'Architected API contracts and documentation standards that accelerated frontend integration and third-party onboarding',
+        'Built real-time data exchange modules under strict reliability constraints — zero tolerance for data loss or duplication',
+      ],
+    },
+    {
+      category: 'Cloud & Infrastructure',
+      color: '#8a2be2',
+      items: [
+        'Deployed Azure Functions for async, event-driven workloads — decoupling background jobs from the core API layer',
+        'Containerized backend services with Docker, eliminating environment-specific failures across dev and production',
+        'Built serverless processing pipelines that auto-scale under load with full cloud monitoring integration',
+      ],
+    },
+    {
+      category: 'Automation & Integration',
+      color: '#c8a96e',
+      items: [
+        'Automated recurring business workflows using Power Automate and custom C# tooling, removing significant manual overhead',
+        'Built third-party API integrations that connected external platforms to internal systems, replacing manual data exports',
+        'Delivered internal tooling solutions that digitized spreadsheet-driven business processes end-to-end',
+      ],
+    },
+    {
+      category: 'Quality & Reliability',
+      color: '#6b8fa8',
+      items: [
+        'Maintained production systems through zero-downtime deployments across all environments',
+        'Profiled and rewrote critical SQL queries and stored procedures, achieving a 40% reduction in execution times',
+        'Established unit test coverage at 95%+ for critical modules, catching regressions before they reached production',
+      ],
+    },
+  ],
   contact: {
     email: 'ykadav08@gmail.com',
-    phone: '+91 9175643317',
     linkedin: 'linkedin.com/in/yogesh-kadav-471427215',
     location: 'Hadapsar, Pune, Maharashtra',
     github: 'github.com/yogeshkadav',

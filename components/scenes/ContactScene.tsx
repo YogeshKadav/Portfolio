@@ -165,7 +165,6 @@ export function ContactScene({ scrollOffset = 0 }: ContactSceneProps) {
         {[
           { label: 'EMAIL', value: PORTFOLIO_DATA.contact.email, color: '#00f0ff', y: 0 },
           { label: 'LINKEDIN', value: 'linkedin.com', color: '#8a2be2', y: -0.8 },
-          { label: 'PHONE', value: PORTFOLIO_DATA.contact.phone, color: '#ff00ff', y: -1.6 },
         ].map((social) => (
           <group key={social.label} position={[0, social.y, 0]}>
             <mesh>

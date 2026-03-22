@@ -257,7 +257,7 @@ export function AboutSection() {
 
               <div style={{ borderTop: `1px solid ${STEEL}22`, paddingTop: '18px' }}>
                 <Label color={STEEL}>Contact</Label>
-                {[PORTFOLIO_DATA.contact.email, PORTFOLIO_DATA.contact.phone, PORTFOLIO_DATA.contact.location].map(v => (
+                {[PORTFOLIO_DATA.contact.email, PORTFOLIO_DATA.contact.location].map(v => (
                   <p key={v} style={{ fontFamily: 'Lato, sans-serif', fontSize: '13px', color: MUTED, margin: '0 0 5px' }}>{v}</p>
                 ))}
               </div>
@@ -437,7 +437,7 @@ export function SkillsSection() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   5. EXPERIENCE
+   5. WORK HIGHLIGHTS
 ══════════════════════════════════════════════════════════════ */
 
 export function ExperienceSection() {
@@ -447,69 +447,39 @@ export function ExperienceSection() {
 
         <motion.div variants={fadeUp}>
           <Label>04</Label>
-          <SectionTitle>Work <span style={{ color: GOLD }}>Experience</span></SectionTitle>
+          <SectionTitle>Work <span style={{ color: GOLD }}>Highlights</span></SectionTitle>
           <Divider />
+          <p style={{
+            fontFamily: 'Lato, sans-serif', fontSize: '14px', color: MUTED,
+            lineHeight: 1.8, maxWidth: '560px', marginBottom: '36px',
+          }}>
+            4+ years of backend engineering across fintech, enterprise automation, and SaaS —
+            shipping production systems that solve real business problems.
+          </p>
         </motion.div>
 
-        <div style={{ position: 'relative', paddingLeft: '28px' }}>
-          {/* Vertical timeline line */}
-          <div style={{
-            position: 'absolute', left: 0, top: '8px', bottom: '24px', width: '1px',
-            background: `linear-gradient(to bottom, ${GOLD}80, ${STEEL}50, transparent)`,
-          }} />
-
-          {PORTFOLIO_DATA.experience.map((exp, i) => (
-            <motion.div key={exp.id} variants={fadeUp} style={{ marginBottom: '28px', position: 'relative' }}>
-              {/* Timeline dot */}
-              <div style={{
-                position: 'absolute', left: '-33px', top: '22px',
-                width: '9px', height: '9px', borderRadius: '50%',
-                background: i === 0 ? GOLD : STEEL,
-                boxShadow: `0 0 8px ${i === 0 ? GOLD : STEEL}88`,
-              }} />
-
-              <Card accent={i === 0 ? GOLD : STEEL}>
-                <div style={{
-                  display: 'flex', justifyContent: 'space-between',
-                  alignItems: 'flex-start', flexWrap: 'wrap', gap: '10px', marginBottom: '14px',
-                }}>
-                  <div>
-                    <h3 style={{
-                      fontFamily: 'Playfair Display, serif', fontSize: '17px', fontWeight: 600,
-                      color: CREAM, margin: '0 0 4px',
-                    }}>{exp.role}</h3>
-                    <p style={{ fontFamily: 'Lato, sans-serif', fontSize: '13px', color: i === 0 ? GOLD : STEEL, margin: 0 }}>
-                      {exp.company}
-                    </p>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: DIM }}>{exp.period}</span>
-                    {exp.current && (
-                      <span style={{
-                        fontFamily: 'DM Mono, monospace', fontSize: '9px', padding: '2px 9px',
-                        border: `1px solid ${GOLD}50`, color: GOLD,
-                        background: `rgba(200,169,110,0.07)`, letterSpacing: '0.12em',
-                      }}>CURRENT</span>
-                    )}
-                  </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+          {PORTFOLIO_DATA.workHighlights.map((group) => (
+            <motion.div key={group.category} variants={fadeUp}>
+              <Card accent={group.color} style={{ height: '100%' }}>
+                {/* Category header */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
+                  <div style={{ width: '3px', height: '18px', background: group.color, borderRadius: '2px' }} />
+                  <p style={{
+                    fontFamily: 'DM Mono, monospace', fontSize: '10px',
+                    color: group.color, letterSpacing: '0.2em', margin: 0,
+                  }}>
+                    {group.category.toUpperCase()}
+                  </p>
                 </div>
 
-                <div style={{ borderTop: `1px solid rgba(200,169,110,0.1)`, paddingTop: '14px', marginBottom: '14px' }}>
-                  {exp.bullets.map((b, bi) => (
-                    <div key={bi} style={{ display: 'flex', gap: '12px', marginBottom: '8px' }}>
-                      <span style={{ color: GOLD_DIM, fontSize: '14px', flexShrink: 0, lineHeight: 1.65 }}>–</span>
-                      <span style={{ fontFamily: 'Lato, sans-serif', fontSize: '13px', color: MUTED, lineHeight: 1.7 }}>{b}</span>
+                {/* Bullets */}
+                <div>
+                  {group.items.map((item, i) => (
+                    <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: '12px' }}>
+                      <span style={{ color: group.color, fontSize: '12px', flexShrink: 0, lineHeight: 1.8, opacity: 0.7 }}>▸</span>
+                      <span style={{ fontFamily: 'Lato, sans-serif', fontSize: '13px', color: MUTED, lineHeight: 1.75 }}>{item}</span>
                     </div>
-                  ))}
-                </div>
-
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                  {exp.tech.map(t => (
-                    <span key={t} style={{
-                      fontFamily: 'DM Mono, monospace', fontSize: '9px', padding: '3px 9px',
-                      border: `1px solid rgba(200,169,110,0.22)`, color: GOLD_DIM,
-                      background: 'rgba(200,169,110,0.04)', letterSpacing: '0.06em',
-                    }}>{t}</span>
                   ))}
                 </div>
               </Card>
@@ -547,7 +517,6 @@ export function ContactSection() {
 
             {[
               { label: 'Email',    value: PORTFOLIO_DATA.contact.email,  href: `mailto:${PORTFOLIO_DATA.contact.email}` },
-              { label: 'Phone',    value: PORTFOLIO_DATA.contact.phone,  href: `tel:${PORTFOLIO_DATA.contact.phone}` },
               { label: 'LinkedIn', value: 'yogesh-kadav-471427215',      href: `https://${PORTFOLIO_DATA.contact.linkedin}` },
             ].map(link => (
               <motion.a
