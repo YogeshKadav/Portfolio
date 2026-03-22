@@ -1,6 +1,6 @@
-# Yogesh Kadav — Cyberpunk 3D Portfolio
+# Yogesh Kadav — Portfolio
 
-A production-ready cyberpunk 3D developer portfolio built with Next.js 14, React Three Fiber, and Framer Motion.
+A production-ready  3D developer portfolio built with Next.js 14, React Three Fiber, and Framer Motion.
 
 ## Tech Stack
 
@@ -44,7 +44,7 @@ npm start
 ```
 portfolio-3d/
 ├── app/
-│   ├── globals.css         # Global styles, cyberpunk theme, animations
+│   ├── globals.css         # Global styles,  theme, animations
 │   ├── layout.tsx          # Root layout with fonts and metadata
 │   └── page.tsx            # Main page with canvas + HTML overlay
 ├── components/
@@ -66,7 +66,7 @@ portfolio-3d/
 │   │   └── ContactScene.tsx        # Contact terminal + globe (y=-100)
 │   ├── ui/
 │   │   ├── LoadingScreen.tsx       # Matrix-rain loading screen
-│   │   ├── NavBar.tsx              # Fixed cyberpunk navigation
+│   │   ├── NavBar.tsx              # Fixed  navigation
 │   │   └── ContactTerminal.tsx     # Hacker terminal contact form
 │   └── MainCanvas.tsx              # Core: Canvas + ScrollControls + SceneManager
 ├── hooks/
